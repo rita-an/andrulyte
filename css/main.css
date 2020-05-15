@@ -1,0 +1,168 @@
+@font-face {
+    font-family: FivoSans;
+    src: url(../font/FivoSans-Light.otf);
+}
+
+body{
+  font:18px/1.2em FivoSans, sans-serif;
+  letter-spacing: 0.1em;
+  background:black;
+  overflow: hidden;
+}
+
+#container{
+  /* background-color: gray; */
+  position: relative;
+  margin-top: 40px;
+  position:absolute;
+  height:calc(100vh - 40px);
+}
+
+.big{
+  width:98%;
+}
+
+.small{
+  width:66%;
+}
+
+/* project circles or something like this:  */
+
+.project{
+  /* sticky position looks funny */
+  position: relative;
+  height:18px;
+  width:18px;
+  border-radius: 50%;
+  background-color: white;
+}
+
+/* #sp{
+  left:10%;
+  top: 35%;
+}
+
+#np{
+  left:30%;
+  top: 60%;
+}
+
+#sh{
+  left:45%;
+  top: 0%;
+}
+
+#vh{
+  left:55%;
+  top: 10%;
+}
+
+#tg{
+  left:70%;
+  top: 75%;
+}
+
+#rb{
+  left:85%;
+  top: 20%;
+} */
+
+.project_title{
+  position: absolute;
+  color: white;
+  padding-left: 30px;
+  width:200px;
+  display: none;
+}
+
+.project:visited{
+  background-color: green;
+}
+
+.project:hover{
+  background-color: green;
+}
+
+.project:hover .project_title{
+  display: inline;
+}
+
+.text{
+  position: relative;
+  margin: 40px 40px;
+}
+
+/* for the show text button: */
+
+#about{
+  position: absolute;
+  background-color: white;
+  margin-top: 0;
+  width: 34%;
+  height: 100%;
+}
+
+.hideText{
+  margin-left: 98%;
+  transition: all 1s;
+}
+
+.showText{
+  margin-left: 66%;
+  transition: all 1s;
+}
+
+.arrow_right {
+  position: fixed;
+  width: 0;
+  height: 0;
+  border-top: 25px solid transparent;
+  border-bottom: 25px solid transparent;
+  border-left: 15px solid black;
+  margin-top:45vh;
+}
+
+.arrow_right:hover{
+    border-left: 15px solid green;
+}
+
+/* for the back arrow: */
+
+.arrow_left{
+  position:fixed;
+  border-top: 25px solid transparent;
+  border-bottom: 25px solid transparent;
+  border-right: 15px solid white;
+  top:45vh;
+  left:1vh;
+}
+
+.arrow_left:hover{
+    border-right: 15px solid green;
+}
+
+/* for the navbar: */
+
+a{
+  text-decoration: none;
+  color:white;
+}
+
+a:hover{
+  color:green;
+}
+
+ul{
+  list-style-type: none;
+}
+
+li{
+  position: absolute;
+  top: 10px;
+  display: inline;
+}
+
+#title{
+  position: absolute;
+  left: 10px;
+}
