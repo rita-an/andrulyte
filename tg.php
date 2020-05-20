@@ -1,9 +1,9 @@
 <?php include('includes/header.php'); ?>
 
       <div class="text">
-        <p>
+        <h1>
           To Go in the Rain
-        </p>
+        </h1>
       </div>
     </div>
 

@@ -1,11 +1,11 @@
 @font-face {
-    font-family: FivoSans;
-    src: url(../font/FivoSans-Light.otf);
+    font-family: WorkAvec;
+    src: url(../font/WorkAvec-Medium.ttf);
 }
 
 body{
-  font:18px/1.2em FivoSans, sans-serif;
-  letter-spacing: 0.1em;
+  font:18px/1.2em WorkAvec, sans-serif;
+  letter-spacing: 0.01em;
   background:black;
   overflow: hidden;
 }
@@ -37,36 +37,6 @@ body{
   background-color: white;
 }
 
-/* #sp{
-  left:10%;
-  top: 35%;
-}
-
-#np{
-  left:30%;
-  top: 60%;
-}
-
-#sh{
-  left:45%;
-  top: 0%;
-}
-
-#vh{
-  left:55%;
-  top: 10%;
-}
-
-#tg{
-  left:70%;
-  top: 75%;
-}
-
-#rb{
-  left:85%;
-  top: 20%;
-} */
-
 .project_title{
   position: absolute;
   color: white;
@@ -88,13 +58,21 @@ body{
 }
 
 .text{
+  /* float: left; */
   position: relative;
-  margin: 40px 40px;
+  /* padding: 40px 40px; */
+  margin: 10px 40px;
+  font-size: 14px;
+}
+
+h1{
+  font-size: 18px;
 }
 
 /* for the show text button: */
 
 #about{
+  overflow:auto;
   position: absolute;
   background-color: white;
   margin-top: 0;
@@ -165,4 +143,22 @@ li{
 #title{
   position: absolute;
   left: 10px;
+}
+
+/* for the project page, general settings: */
+
+.images{
+  position: absolute;
+  height: 85%;
+  width: 85%;
+  top:50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+
+}
+
+img{
+  display: none;
+
 }
