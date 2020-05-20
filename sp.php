@@ -32,15 +32,13 @@
       </div>
     </div>
 
-    <!-- <div class="images" id="sp_images">
-      <img class="img" src='img/sp/1.jpg'></img>
-    </div> -->
+    <div class="img_con">
+      <img class="images" id="sp_1" src='img/sp/1.jpg'></img>
+    </div>
 
-    <!-- <div id="container" class="big">
-      <div class="images" id="sp_images">
-        <img class="img" src='img/sp/1.jpg'></img>
-      </div>
-    </div> -->
+    <div id="container" class="big">
+
+    </div>
 
 
 <?php include('includes/back.php'); ?>
