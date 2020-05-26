@@ -1,8 +1,8 @@
 <?php include('includes/header.php'); ?>
 
         <div class="text">
-          <!-- <h1>About me</h1>
-          <br> -->
+          <h1>About</h1>
+          <br>
           <p>
             As a designer im interested in the interarction between object and
             human. With my designs i seek to analyse difficult topics and to start

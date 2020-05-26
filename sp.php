@@ -33,7 +33,7 @@
     </div>
 
     <div class="img_con">
-      <img class="images" id="sp_1" src='img/sp/1.jpg'></img>
+      <img class="sp" id="image" src='img/sp/1.png' onclick = "changeImage()"/>
     </div>
 
     <div id="container" class="big">
