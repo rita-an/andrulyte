@@ -8,38 +8,92 @@ body{
   letter-spacing: 0.01em;
   background:black;
   overflow: hidden;
+  cursor:auto;
+}
+
+.nodisplay{
+  display: none;
+}
+
+#circle_container{
+  position:absolute;
+  margin-top:40px;
+  margin-left:40px;
+  height:calc(100vh - 80px);
+  z-index:-5;
 }
 
 #container{
-  /* background-color: gray; */
-  position: relative;
-  margin-top: 40px;
   position:absolute;
-  height:calc(100vh - 40px);
+  top:0;
+  height:100vh;
+  z-index:-5;
 }
 
-.big{
-  width:98%;
+.big_circles{width:calc(100vw - 80px); transition: all 1s;}
+
+.big{width:100vw; transition: all 1s;}
+
+.small_circles{width:calc(66vw - 80px); transition: all 1s;}
+
+.small{width:66vw; transition: all 1s;}
+
+/* style navbar on start*/
+
+a{
+  text-decoration: none;
+  color:white;
 }
 
-.small{
-  width:66%;
+a:hover{
+  color: gray;
 }
+
+.nav{
+  list-style-type: none;
+  z-index: 1;
+}
+
+.nav_item{
+  position: absolute;
+  top: 10px;
+  display: inline;
+}
+
+#title{
+  position: absolute;
+  top:10px;
+  color:white;
+  left: 20px;
+}
+
+#rearange{
+  position: absolute;
+  right: 20px;
+}
+
+#close{
+  position: absolute;
+  right: 20px;
+  display:none;
+  z-index: 2;
+}
+
+.black{
+  color:black;
+}
+
 
 /* project circles:  */
 
-.project_link{
-  position:absolute;
-}
+/* .project_link{position: relative;} */
 
 .project{
-  /* sticky position looks funny */
-  position: relative;
+  position: absolute;
   height:18px;
   width:18px;
   border-radius: 50%;
   background-color: white;
-  opacity:1;
 }
 
 .project_title{
@@ -50,138 +104,156 @@ body{
   display: none;
 }
 
-.project_link:visited .project{
-  background-color: green;
-  opacity: 0.6;
-  border-radius: 0;
+.project:hover .project_title{display: inline;}
+
+/* individual colors of projects on startpage: */
+
+.project_link:visited #np{background-color: #FFA500;}
+#np:hover{background-color: #FFA500;}
+
+.project_link:visited #rb{background-color: #4169E1;}
+#rb:hover{background-color: #4169E1;}
+
+.project_link:visited #sh{background-color: #20B2AA;}
+#sh:hover{background-color: #20B2AA;}
+
+.project_link:visited #sp{background-color: #FF6347;}
+#sp:hover{background-color: #FF6347;}
+
+.project_link:visited #tg{background-color: #BA55D3;}
+#tg:hover{background-color: #BA55D3;}
+
+.project_link:visited #vh{background-color: #228B22;}
+#vh:hover{background-color: #228B22;}
+
+
+/* for the show text button: */
+
+#info{
+  z-index: 1;
+  overflow:auto;
+  position: absolute;
+  background-color: white;
+  margin-top: 0;
+  width: 35%;
+  height: 100%;
 }
 
-.project:hover{
-  background-color: green;
+.hideText{
+  margin-left: 100%;
+  transition: all 1s;
 }
 
-.project:hover .project_title{
-  display: inline;
+.showText{
+  margin-left: 65%;
+  transition: all 1s;
 }
 
-.text{
-  /* float: left; */
-  position: relative;
-  /* padding: 40px 40px; */
-  margin: 10px 40px;
-  font-size: 14px;
+/* info-text style: */
+
+.facts{
+  color: white;
+}
+
+.fact a:hover{
+  color:white;
 }
 
 h1{
   font-size: 18px;
 }
 
-/* for the show text button: */
-
-#about{
-  z-index: 1;
-  overflow:auto;
-  position: absolute;
-  background-color: white;
-  margin-top: 0;
-  width: 34%;
-  height: 100%;
+.text{
+  position: relative;
+  margin: 10px 40px;
+  font-size: 14px;
 }
 
-.hideText{
-  margin-left: 98%;
-  transition: all 1s;
+/* style "navbar" project site: */
+
+.pr_title{
+  position: relative;
+  top:10px;
+  text-align: center;
+  z-index: -99;
 }
 
-.showText{
-  margin-left: 66%;
-  transition: all 1s;
-}
-
-.arrow_right {
+.img_count{
   position: fixed;
-  width: 0;
-  height: 0;
-  border-top: 25px solid transparent;
-  border-bottom: 25px solid transparent;
-  border-left: 15px solid black;
-  margin-top:45vh;
+  left: 50%;
+  transform: translate(-50%, 0);
+  bottom:10px;
 }
 
-.arrow_right:hover{
-    border-left: 15px solid green;
-}
-
-/* for the back arrow: */
-
-.arrow_left{
-  position:fixed;
-  border-top: 25px solid transparent;
-  border-bottom: 25px solid transparent;
-  border-right: 15px solid white;
-  top:45vh;
-  left:1%;
-}
-
-.arrow_left:hover{
-    border-right: 15px solid green;
-}
-
-/* for the navbar: */
-
-a{
-  text-decoration: none;
-  color:white;
-}
-
-a:hover{
-  color:green;
-}
-
-ul{
-  list-style-type: none;
-}
-
-li{
+#back{
   position: absolute;
-  top: 10px;
-  display: inline;
+  left: 20px;
 }
 
-#title{
+#info_project{
   position: absolute;
-  left: 10px;
+  right:20px;
 }
 
-/* for the project page, general settings: */
+/* for the image container: */
 
-.img_con{
+.img_container{
+  cursor: none;
   position: absolute;
   height: 85%;
-  width: 85%;
+  width: 80%;
   top:50%;
   left:50%;
   transform: translate(-50%, -50%);
-  /* background-color: white; */
-
 }
 
-#image{
+.images{
   position: relative;
-  z-index: -1;
+  z-index: -2;
   width: 100%;
   height: 100%;
   top:50%;
   left:50%;
   transform: translate(-50%, -50%);
   object-fit: contain;
-  /* object-position: 50vw 50vh; */
+
+}
+
+#image{
+  display: none;
+}
+
+#next{
+  cursor: none;
+  position: fixed;
+  z-index:9999;
+  display: none;
+}
+
+#prev{
+  cursor: none;
+  position: fixed;
+  z-index:9999;
+  display: none;
 }
 
 
 /* for the safe place project page: */
 
-.sp{
+/* .sp_images .images{
   width: 80%;
   height: 80%;
+} */
+
+
+/* disable text selection: */
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
 }

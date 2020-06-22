@@ -1,0 +1,25 @@
+body{
+  background:white;
+}
+
+a{
+  text-decoration: none;
+  color:black;
+}
+
+a:hover{
+  color:white;
+}
+
+#close a:hover{
+  color:white;
+}
+
+#info{
+  color:black;
+  width: 35%;
+}
+
+.showText{
+  margin-left: 65%;
+}

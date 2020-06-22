@@ -1,6 +1,3 @@
-// change image on onclick
-
-
 //random positioning of the circles:
 
 var circles = [];
@@ -12,9 +9,9 @@ $('.project').each(function(){
 
 function randomPos(){
   for (var i = 0; i < circles.length; i++){
-    var distance = 80;
-    var width = $('#container').innerWidth();
-    var height = $('#container').innerHeight();
+    var distance = $('.project').width();
+    var width = $('#circle_container').innerWidth();
+    var height = $('#circle_container').innerHeight();
     var x = Math.random() * (width - distance*2)
     var y = Math.random() * (height - distance*2)
     circles[i].css('left', x + 'px');
@@ -23,33 +20,44 @@ function randomPos(){
   }
 }
 
-// function randomPos2(){
-//   for (var i = 0; i < circles.length; i++){
-//     var distance = 80;
-//     var height = $('#container').innerHeight();
-//     var x = Math.random() * ($('#container').innerWidth()- distance*2)
-//     var y = Math.random() * (height - distance*2)
-//
-//     for (var j = 0; j < circles.length; i++){
-//       var other = circles[i].offset();
-//       var new = circlse[j].offset();
-//
-//     }
-//
-//
-//   }
-// }
-
 // button showtext:
 
 function showText(){
-  $('.arrow_right').parent().toggleClass('showText');
+  $('#info').toggleClass('showText');
+  $('#circle_container').toggleClass('small_circles');
   $('#container').toggleClass('small');
-  randomPos();
+  $('#close').toggle();
 }
 
+// individual colours
+
+function individual(){
+  var color = $('#col').html();
+  $('#info').css('background-color', color);
+  $('#back').children().hover(function(){
+    $(this).css('color', color);
+  }, function(){
+    $(this).css('color', 'black');
+  });
+  $('#info_project').children().hover(function(){
+    $(this).css('color', color);
+  }, function(){
+    $(this).css('color', 'black');
+  });
+}
+
+// not possible to select a:visited in jquery?
+
+// function colorOnStart(id, color){
+//   $('.project_link:visited' + id).css('background-color', color +';');
+//   $(id).hover(function(){
+//     $(this).css('background-color', color);
+//   }, function(){
+//     $(this).css('background-color', 'white');
+//   });
+// }
 
 $(document).ready(function(){
   randomPos();
-
+  individual();
 });
