@@ -9,7 +9,7 @@
   <header class="navbar">
     <ul class="nav">
       <li class="nav_item" id="title">rita andrulyte // product designer // <a href= "mailto:addanemailaddress">email</a></li>
-      <li class="nav_item" id="rearange"><a href="index.php">rearange</a></li>
+      <li class="nav_item" id="rearange"><a href="index.php">reshuffle</a></li>
     </ul>
   </header>
   <body>
